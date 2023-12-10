@@ -864,20 +864,5 @@ export const assessment = [
         name: "C++",
         NoOfTest: 0,
         CppData
-    },
-    {
-        name: "PYTHON",
-        NoOfTest: 0,
-        PythonData
-    },
-    {
-        name: "C",
-        NoOfTest: 0,
-        CData
-    },
-    {
-        name: "C++",
-        NoOfTest: 0,
-        CppData
     }
 ]
