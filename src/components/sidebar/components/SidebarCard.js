@@ -35,9 +35,9 @@ export default function SidebarDocs() {
         left='50%'
         top='-47px'
         transform='translate(-50%, 0%)'>
-        <Image src={logoWhite} w='40px' h='40px' />
+        {/* <Image src={logoWhite} w='40px' h='40px' /> */}
       </Flex>
-      <Flex
+      {/* <Flex
         direction='column'
         mb='12px'
         align='center'
@@ -65,8 +65,8 @@ export default function SidebarDocs() {
           Improve your development process and start doing more with Horizon UI
           PRO!
         </Text>
-      </Flex>
-      <Link href='https://horizon-ui.com/pro?ref=horizon-chakra-free'>
+      </Flex> */}
+      {/* <Link href='https://horizon-ui.com/pro?ref=horizon-chakra-free'>
         <Button
           bg='whiteAlpha.300'
           _hover={{ bg: "whiteAlpha.200" }}
@@ -79,7 +79,7 @@ export default function SidebarDocs() {
           mx='auto'>
           Upgrade to PRO
         </Button>
-      </Link>
+      </Link> */}
     </Flex>
   );
 }
