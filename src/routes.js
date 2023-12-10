@@ -21,6 +21,7 @@ import SignInCentered from "views/auth/signIn";
 import CreateQuestions from "views/admin/createQuestions/index.js";
 import CreateTest from "views/admin/test/createTest/index.js";
 import alltest from "views/admin/subject/test/sub_test.js"
+import ApprovalTable from "views/admin/approval/approval";
 
 import App from "views/admin/result/result.js"
 
@@ -61,6 +62,14 @@ const routes = [
     path: "/result",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: App
+    // secondary:true
+  },
+  {
+    name: "Approval",
+    layout: "/admin",
+    path: "/approval",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: ApprovalTable
     // secondary:true
   },
   // {
