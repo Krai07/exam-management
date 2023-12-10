@@ -52,8 +52,8 @@ const CreateTest = () => {
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4, "2xl": 6 }} gap="20px">
         {subjects.map((value, index) => (
           <div key={index}>
-            <Link to ="/admin/coursetest">
-            <MiniStatistics value={value} />
+            <Link to={`/admin/subject/test/${index}`}>
+              <MiniStatistics value={value} />
             </Link>
           </div>
         ))}

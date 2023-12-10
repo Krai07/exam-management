@@ -20,6 +20,7 @@ import MainDashboard from "views/admin/default";
 import SignInCentered from "views/auth/signIn";
 import CreateQuestions from "views/admin/createQuestions/index.js";
 import CreateTest from "views/admin/test/createTest/index.js";
+import alltest from "views/admin/subject/test/sub_test.js"
 
 const routes = [
   {
@@ -45,11 +46,11 @@ const routes = [
     component: CreateTest,
   },
   {
-    name: "Create Questions",
+    name: "All Tests",
     layout: "/admin",
-    path: "/coursetest",
+    path: "/subject/test/:subjectId",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
-    component: CreateQuestions,
+    component: alltest,
     secondary:true
   },
   // {
