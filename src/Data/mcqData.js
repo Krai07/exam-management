@@ -399,6 +399,7 @@ export const CData = [
     }
    
 ];
+];
 
 
 
@@ -840,12 +841,30 @@ export const CppData = [
     },
 
 
-];
+
+// ];
+
+
 export const assessment = [
     {
         name: "JAVA",
         NoOfTest: 0,
         JavaData
+    },
+    {
+        name: "PYTHON",
+        NoOfTest: 0,
+        PythonData
+    },
+    {
+        name: "C",
+        NoOfTest: 0,
+        CData
+    },
+    {
+        name: "C++",
+        NoOfTest: 0,
+        CppData
     },
     {
         name: "PYTHON",

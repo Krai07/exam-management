@@ -32,17 +32,25 @@ const routes = [
   {
     name: "Create Questions",
     layout: "/admin",
-    path: "/createQuestions",
+    path: "/createquestions",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: CreateQuestions,
   },
   
   {
-    name: "Create Test",
+    name: "Subject Tests",
     layout: "/admin",
     path: "/createTest",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: CreateTest,
+  },
+  {
+    name: "Create Questions",
+    layout: "/admin",
+    path: "/coursetest",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: CreateQuestions,
+    secondary:true
   },
   // {
   //   name: "NFT Marketplace",
