@@ -11,11 +11,15 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  Input,
+  Stack,
 } from "@chakra-ui/react";
 
 const AllTest = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTest, setSelectedTest] = useState(null);
+  const [newQuestion, setNewQuestion] = useState("");
+  const [isAddingQuestion, setIsAddingQuestion] = useState(false);
 
   const openModal = (testNumber) => {
     setSelectedTest(testNumber);
@@ -25,6 +29,15 @@ const AllTest = () => {
   const closeModal = () => {
     setSelectedTest(null);
     setIsOpen(false);
+    setNewQuestion("");
+    setIsAddingQuestion(false); // Reset the flag on modal close
+  };
+
+  const handleAddQuestion = () => {
+    // Add your logic here to handle the new question
+    console.log("Adding question:", newQuestion);
+    setNewQuestion(""); // Clear the input field after adding the question
+    setIsAddingQuestion(false); // Reset the flag after adding the question
   };
 
   const renderTestCard = (testNumber) => (
@@ -53,15 +66,36 @@ const AllTest = () => {
             {/* Add content for the modal body here */}
             <Text>Questions for Test {selectedTest}</Text>
 
-            {/* Static 'Add Questions' button */}
-            <Flex justifyContent="flex-end" mt={4}>
-              <Button colorScheme="blue">
-                Add Questions
-              </Button>
-            </Flex>
+            {/* Conditionally render the input field */}
+            {isAddingQuestion && (
+              <Stack spacing={4} mt={4}>
+                <Input
+                  type="text"
+                  placeholder="Type your question here"
+                  value={newQuestion}
+                  onChange={(e) => setNewQuestion(e.target.value)}
+                />
+              </Stack>
+            )}
           </ModalBody>
           <ModalFooter>
-            {/* Add any additional footer content if needed */}
+            {/* Static 'Add Questions' button */}
+            {!isAddingQuestion && (
+              <Flex justifyContent="flex-end">
+                <Button colorScheme="blue" onClick={() => setIsAddingQuestion(true)}>
+                  Add Question
+                </Button>
+              </Flex>
+            )}
+
+            {/* 'Save' button to save the question */}
+            {isAddingQuestion && (
+              <Flex justifyContent="flex-end">
+                <Button colorScheme="green" onClick={handleAddQuestion}>
+                  Save
+                </Button>
+              </Flex>
+            )}
           </ModalFooter>
         </ModalContent>
       </Modal>
