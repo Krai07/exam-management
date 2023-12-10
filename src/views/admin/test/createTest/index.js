@@ -12,26 +12,35 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  Input,
+  Stack,
 } from "@chakra-ui/react";
 import MiniStatistics from "components/card/MiniStatistics";
-import { assessment } from "../../../../Data/mcqData";
 import { Link } from "react-router-dom";
+import { assessment } from "Data/mcqData";
 
 const CreateTest = () => {
   const brandColor = useColorModeValue("brand.500", "white");
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
 
-  // State for managing the modal visibility
   const [isModalOpen, setModalOpen] = useState(false);
+  const [subjects, setSubjects] = useState(assessment.map((value) => value.name));
+  const [newSubject, setNewSubject] = useState("");
 
-  // Function to open the modal
   const openModal = () => {
     setModalOpen(true);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setModalOpen(false);
+  };
+
+  const handleSave = () => {
+    if (newSubject.trim() !== "") {
+      setSubjects([...subjects, newSubject]);
+      setNewSubject("");
+      closeModal();
+    }
   };
 
   return (
@@ -41,29 +50,34 @@ const CreateTest = () => {
       </Flex>
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4, "2xl": 6 }} gap="20px">
-        {assessment.map((value, index) => (
+        {subjects.map((value, index) => (
           <div key={index}>
-            <Link to="/admin/coursetest">
-              <MiniStatistics value={value.name} />
-            </Link>
+            <MiniStatistics value={value} />
           </div>
         ))}
       </SimpleGrid>
 
-      {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal} size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Add new Subject</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {/* Add your modal content here */}
-            {/* You can include form fields or any other content */}
+            <Stack spacing={4}>
+              <Input
+                type="text"
+                placeholder="Subject Name"
+                value={newSubject}
+                onChange={(e) => setNewSubject(e.target.value)}
+              />
+            </Stack>
           </ModalBody>
           <ModalFooter>
-            {/* You can add footer actions if needed */}
             <Button colorScheme="blue" onClick={closeModal}>
               Close
+            </Button>
+            <Button colorScheme="green" ml={3} onClick={handleSave}>
+              Save
             </Button>
           </ModalFooter>
         </ModalContent>
