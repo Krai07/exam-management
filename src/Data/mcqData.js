@@ -399,7 +399,6 @@ export const CData = [
     }
    
 ];
-];
 
 
 
@@ -842,7 +841,7 @@ export const CppData = [
 
 
 
-// ];
+];
 
 
 export const assessment = [
