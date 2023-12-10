@@ -22,6 +22,8 @@ import CreateQuestions from "views/admin/createQuestions/index.js";
 import CreateTest from "views/admin/test/createTest/index.js";
 import alltest from "views/admin/subject/test/sub_test.js"
 
+import App from "views/admin/result/result.js"
+
 const routes = [
   {
     name: "Main Dashboard",
@@ -52,6 +54,14 @@ const routes = [
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: alltest,
     secondary:true
+  },
+  {
+    name: "Result",
+    layout: "/admin",
+    path: "/result",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: App
+    // secondary:true
   },
   // {
   //   name: "NFT Marketplace",
