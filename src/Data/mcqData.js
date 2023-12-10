@@ -848,21 +848,21 @@ export const assessment = [
     {
         name: "JAVA",
         NoOfTest: 0,
-        JavaData
+        data: JavaData
     },
     {
         name: "PYTHON",
         NoOfTest: 0,
-        PythonData
+        data: PythonData
     },
     {
         name: "C",
         NoOfTest: 0,
-        CData
+        data: CData
     },
     {
         name: "C++",
         NoOfTest: 0,
-        CppData
+        data: CppData
     }
 ]

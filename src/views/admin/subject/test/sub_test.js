@@ -17,8 +17,12 @@ import {
   RadioGroup,
   VStack,
 } from "@chakra-ui/react";
+import { assessment } from "Data/mcqData";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 const AllTest = () => {
+  const param = useParams();
+  const subjectId = param.subjectId;
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTest, setSelectedTest] = useState(null);
   const [isAddingQuestion, setIsAddingQuestion] = useState(false);
@@ -105,8 +109,26 @@ const AllTest = () => {
           <ModalHeader>Questions</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            {/* Add content for the modal body here */}
-            <Text>Questions for Test {selectedTest}</Text>
+
+          {assessment[subjectId].data.map((val, index)=>{
+                return(
+                    <div>
+                        <Text 
+                            borderWidth="2px" 
+                            borderStyle="solid"
+                            borderBottomWidth="4px"
+                            textAlign="center"
+                            >{val.question}</Text>
+                            {val.options.map((opVal, opIdx)=>{
+                                return(
+                                    <div>
+                                        <li>{opVal}</li>
+                                    </div>
+                                )
+                            })}
+                    </div>
+                )
+            })}
 
             {/* Display the saved questions for the current card */}
             <VStack align="start" mt={4} spacing={2}>
@@ -194,7 +216,7 @@ const AllTest = () => {
     }
   };
 
-  return <Flex>{Array.from({ length: 5 }, (_, index) => renderTestCard(index + 1))}</Flex>;
+  return <Flex>{Array.from({ length: 2 }, (_, index) => renderTestCard(index + 1))}</Flex>;
 };
 
 export default AllTest;
