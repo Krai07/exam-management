@@ -18,6 +18,8 @@ import MainDashboard from "views/admin/default";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
+import CreateQuestions from "views/admin/createQuestions/index.js";
+import CreateTest from "views/admin/test/createTest/index.js";
 
 const routes = [
   {
@@ -26,6 +28,21 @@ const routes = [
     path: "/default",
     icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
     component: MainDashboard,
+  },
+  {
+    name: "Create Questions",
+    layout: "/admin",
+    path: "/createQuestions",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: CreateQuestions,
+  },
+  
+  {
+    name: "Create Test",
+    layout: "/admin",
+    path: "/createTest",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: CreateTest,
   },
   // {
   //   name: "NFT Marketplace",
