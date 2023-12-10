@@ -102,7 +102,6 @@ const AllTest = () => {
       <Text fontSize="xl" fontWeight="bold">
         Test {testNumber}
       </Text>
-      <Text mt={2}>Test Description or any relevant information</Text>
       <Modal isOpen={isOpen && selectedTest === testNumber} onClose={closeModal} size="xl">
         <ModalOverlay />
         <ModalContent>

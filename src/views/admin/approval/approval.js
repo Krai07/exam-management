@@ -25,9 +25,9 @@ const ApprovalTable = ({ data, onApprove, onReject }) => {
         </Thead>
         <Tbody>
             <Tr>
-              <Td>name</Td>
-              <Td>Requested Subject Name</Td>
-              <Td>Date of Request</Td>
+              <Td>Sahil</Td>
+              <Td>Java</Td>
+              <Td>01/12/2023</Td>
               <Td>
                 <Button colorScheme="green" onClick={() => onApprove()}>
                   Approve
