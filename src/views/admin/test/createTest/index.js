@@ -20,19 +20,24 @@ const CreateTest = () => {
       </Flex>
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4, "2xl": 6 }} gap="20px">
-        {/* Card 1 */}
-        <Link
-        to="/admin/coursetest"
-        >
-          <MiniStatistics
-            // name={assessment[0].name}
-            // value={assessment[0].JavaData[0].questionNo}
-            value={assessment[0].name}
-          />
-        </Link>
+        {assessment.map((value, index)=>{
+          return(
+            <div key={index}>
+              <Link
+              to="/admin/coursetest"
+              >
+                <MiniStatistics
+                  // name={assessment[0].name}
+                  // value={assessment[0].JavaData[0].questionNo}
+                  value={value.name}
+                />
+              </Link>
+            </div>
+          )
+        })}
 
         {/* Card 2 */}
-        <Button
+        {/* <Button
           onClick={() => {
             // Add your onClick logic here
             console.log("Card 2 clicked");
@@ -43,10 +48,10 @@ const CreateTest = () => {
             name={assessment[0].name}
             value={assessment[0].JavaData[0].questionNo}
           />
-        </Button>
+        </Button> */}
 
         {/* Card 3 */}
-        <Button
+        {/* <Button
           onClick={() => {
             // Add your onClick logic here
             console.log("Card 3 clicked");
@@ -57,10 +62,10 @@ const CreateTest = () => {
             name={assessment[0].name}
             value={assessment[0].JavaData[0].questionNo}
           />
-        </Button>
+        </Button> */}
 
         {/* Card 4 */}
-        <Button
+        {/* <Button
           onClick={() => {
             // Add your onClick logic here
             console.log("Card 4 clicked");
@@ -71,7 +76,7 @@ const CreateTest = () => {
             name={assessment[0].name}
             value={assessment[0].JavaData[0].questionNo}
           />
-        </Button>
+        </Button> */}
       </SimpleGrid>
     </Box>
   );
