@@ -135,51 +135,51 @@ const JavaData = [
     },
     {
         questionNo: 23,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "In which memory a String is stored, when we create a string using new operator?",
+        options: ["Stack", "String memory", "Heap memory", "Random storage space"],
+        answer: "Heap memory"
     },
     {
         questionNo: 24,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "What is the use of the intern() method?",
+        options: ["It returns the existing string from memory", "It creates a new string in the database", "It modifies the existing string in the database", "None of the above"],
+        answer: "It returns the existing string from the memory"
     },
     {
         questionNo: 25,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "Which of the following is a marker interface?",
+        options: ["Runnable interface", "Remote interface", "Readable interface", "Result interface"],
+        answer: "Remote interface"
     },
     {
         questionNo: 26,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "Which of the following is a reserved keyword in Java?",
+        options: ["object", "strictfp", "main", "system"],
+        answer: "strictfp"
     },
     {
         questionNo: 27,
-        question: "",
-        options: ["", "", "", ""],
+        question: "Which keyword is used for accessing the features of a package?",
+        options: ["package", "import", "extends", "export"],
         answer: ""
     },
     {
         questionNo: 28,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "In java, jar stands for_____.",
+        options: ["Java Archive Runner", "Java Application Resource", "Java Application Runner", "None of the above"],
+        answer: "None of the above"
     },
     {
         questionNo: 29,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "Which of the following is false?",
+        options: ["The rt.jar stands for the runtime jar", "It is an optional jar file", "It contains all the compiled class files", "All the classes available in rt.jar is known to the JVM"],
+        answer: "It is an optional jar file."
     },
     {
         questionNo: 30,
-        question: "",
-        options: ["", "", "", ""],
-        answer: ""
+        question: "What is the use of \w in regex?",
+        options: ["Used for a whitespace character", "Used for a non-whitespace character", "Used for a word character", "Used for a non-word character"],
+        answer: "Used for a word character"
     },
 ]
 
